@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="saecdata.proyectoProductosAlbert.controllers.ProductoController">
+    <children>
+        <!-- Título -->
+        <Text text="Productos Disponibles" layoutX="180" layoutY="20" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+        <!-- Tabla de Productos -->
+        <TableView fx:id="productoTable" layoutX="50" layoutY="60" prefWidth="600" prefHeight="250">
+            <columns>
+                <TableColumn fx:id="nombreColumn" text="Nombre" prefWidth="150"/>
+                <TableColumn fx:id="precioColumn" text="Precio" prefWidth="100"/>
+                <TableColumn fx:id="stockColumn" text="Stock" prefWidth="100"/>
+                <TableColumn fx:id="categoriaColumn" text="Categoría" prefWidth="250"/>
+            </columns>
+        </TableView>
+
+        <!-- Campos de texto -->
+        <Label text="Nombre:" layoutX="50" layoutY="330"/>
+        <TextField fx:id="nombreField" layoutX="120" layoutY="325" prefWidth="150"/>
+
+        <Label text="Precio:" layoutX="290" layoutY="330"/>
+        <TextField fx:id="precioField" layoutX="350" layoutY="325" prefWidth="100"/>
+
+        <Label text="Stock:" layoutX="50" layoutY="370"/>
+        <TextField fx:id="stockField" layoutX="120" layoutY="365" prefWidth="150"/>
+
+        <Label text="Categoría:" layoutX="290" layoutY="370"/>
+        <ComboBox fx:id="categoriaComboBox" layoutX="350" layoutY="365" prefWidth="200"/>
+
+        <!-- Botones -->
+        <Button text="Crear" layoutX="50" layoutY="410" onAction="#crearProducto"/>
+        <Button text="Actualizar" layoutX="130" layoutY="410" onAction="#actualizarProducto"/>
+        <Button text="Eliminar" layoutX="240" layoutY="410" onAction="#eliminarProducto"/>
+        <Button text="Cerrar sesión" layoutX="400" layoutY="410" onAction="#handleLogout"/>
+    </children>
+</AnchorPane>

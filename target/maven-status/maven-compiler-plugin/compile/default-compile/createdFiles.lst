@@ -1,0 +1,17 @@
+saecdata\proyectoProductosAlbert\Main.class
+saecdata\proyectoProductosAlbert\controllers\LoginController.class
+saecdata\proyectoProductosAlbert\models\Rol.class
+saecdata\proyectoProductosAlbert\models\Usuario.class
+saecdata\proyectoProductosAlbert\controllers\MainController.class
+saecdata\proyectoProductosAlbert\auth\AuthContext.class
+saecdata\proyectoProductosAlbert\controllers\ProductoController.class
+saecdata\proyectoProductosAlbert\config\AppConfig.class
+saecdata\proyectoProductosAlbert\models\Categoria.class
+saecdata\proyectoProductosAlbert\services\AuthService.class
+saecdata\proyectoProductosAlbert\services\CategoriaService$1.class
+saecdata\proyectoProductosAlbert\services\ProductoService.class
+saecdata\proyectoProductosAlbert\services\CategoriaService.class
+saecdata\proyectoProductosAlbert\services\ProductoService$1.class
+saecdata\proyectoProductosAlbert\models\JwtResponse.class
+saecdata\proyectoProductosAlbert\models\Producto.class
+saecdata\proyectoProductosAlbert\controllers\RegisterController.class
