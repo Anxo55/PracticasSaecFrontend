@@ -57,25 +57,30 @@ public class ProductoService {
             conn.setDoOutput(true);
             ObjectMapper mapper = new ObjectMapper();
             String json = mapper.writeValueAsString(producto);
-
+    
+            // DEBUG: ver qué estás enviando
+            System.out.println("JSON enviado al backend:");
+            System.out.println(json);
+    
             try (OutputStream os = conn.getOutputStream()) {
                 os.write(json.getBytes());
                 os.flush();
             }
-
+    
             int responseCode = conn.getResponseCode();
             if (responseCode != 200 && responseCode != 201) {
                 System.err.println("Error al enviar producto. Código de respuesta: " + responseCode);
                 System.err.println("Mensaje de error: " + getErrorMessage(conn));
                 return false;
             }
-
+    
             return true;
         } catch (IOException e) {
             e.printStackTrace();
             return false;
         }
     }
+    
 
     private HttpURLConnection createConnection(String urlString, String method) throws IOException {
         URL url = new URL(urlString);

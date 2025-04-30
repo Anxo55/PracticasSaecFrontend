@@ -1,19 +1,20 @@
 package saecdata.proyectoProductosAlbert.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Producto {
 
-    private Long id;  // Cambiar a Long
+    private Long id;  // <-- Cambiado de 'long' a 'Long'
     private String nombre;
     private double precio;
     private int stock;
+    
+    @JsonProperty("categorias")
     private Categoria categoria;
 
-    // Constructor
     public Producto(String nombre, double precio, int stock, Categoria categoria) {
-        this.id = (long) (Math.random() * 10000);  // Usar un valor aleatorio como Long
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
@@ -21,15 +22,13 @@ public class Producto {
     }
 
     public Producto() {
-
     }
 
-    // Getters y Setters
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
